@@ -1,14 +1,15 @@
 package dmFiguras;
 
-import java.util.Scanner;
+
+import Utility.validarIngreso;
 
 public class ControllerF1toF12 {
 
     public void showFiguras() {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Ingrese el número de niveles para las Figuras: ");
-        int niveles = scanner.nextInt();
+        
+        System.out.println("\u001B[31;1mFIGURAS\u001B[0m");
+        System.out.println("Ingrese el nivel de la figura que desea imprimir");
+        int niveles = validarIngreso.validarIngresoNumero();
 
         new DmFiguraF1().imprimir(niveles);
         new DmFiguraF2().imprimir(niveles);
@@ -22,7 +23,8 @@ public class ControllerF1toF12 {
         new DmFiguraF10().imprimir(niveles);
         new DmFiguraF11().imprimir(niveles);
         new DmFiguraF12().imprimir(niveles);
+        new dsFiguraF13().crearFiguraF13(niveles);
+
     
-        scanner.close();
     }
 }
