@@ -13,8 +13,7 @@ public static void main(String[] args) {
     programa.cargaNombre();
     programa.nombreFila();
     programa.figuraRotativa();
-}
-    
+}  
     public void carga() {
         Controller controller = new Controller();
         controller.mostrarCarga();
