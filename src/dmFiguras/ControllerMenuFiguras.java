@@ -1,8 +1,8 @@
 package dmFiguras;
 
-import Utility.validarIngreso;
+import Utility.*;
 
-public class MenuFiguras {
+public class ControllerMenuFiguras {
     public void showMenu() {
     int figura = 0;
     System.out.println("Bienvenido a PoliRetos");
@@ -65,22 +65,22 @@ public class MenuFiguras {
                 new dsFiguraF13().crearFiguraF13(niveles);
                 break;
             case 14:
-                    
+                new dsFigura14().generarFiguraF14(niveles);
                 break;
             case 15:
-                    
+                new dsFigura15().mostrarFigura15(niveles);
                 break;
             case 16:
-                    
+                new dsFigura16().mostrarFigura16(niveles);
                 break;
             case 17:
-                    
+                new dsFigura17().mostrarFigura17(niveles);
                 break;
             case 18:
-                    
+                new dsFigura18().mostrarFigura18(niveles);
                 break;
             case 19:
-                    
+                new dsFigura19().mostrarFigura19(niveles);  
                 break;
             case 20:
                 System.out.println("Saliendo al menú principal...");
@@ -90,11 +90,7 @@ public class MenuFiguras {
         }
         
         if (figura != 20) {
-            try {
-                Thread.sleep(3500); // pausa 3.5 segundos
-            } catch (Exception e) {
-                // Ignorar excepción
-            }
+            Esperar.esperarSegundos(3500);//Esperar 3.5 segundos
         }
     }
     
