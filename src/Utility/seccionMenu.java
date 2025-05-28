@@ -1,5 +1,6 @@
 package Utility;
-import dmFiguras.MenuFiguras;
+import dmFiguras.ControllerMenuFiguras;
+import dsCadenas.controllerCadenas;
 
 public class seccionMenu {
     public static void mostrarSeccionMenu(int seccion) throws InterruptedException
@@ -12,10 +13,10 @@ public class seccionMenu {
             //Caracteres
             break;
             case 3:
-            new MenuFiguras().showMenu();
+            new ControllerMenuFiguras().showMenu();
             break;
             case 4:
-            //menuCadenas
+            new controllerCadenas().showMenuCadenas();
             break;
             case 5:
             //Arrays
@@ -28,7 +29,7 @@ public class seccionMenu {
             break;
             case 8:
             //Todo
-            new MenuFiguras().showMenu();
+            new ControllerMenuFiguras().showMenu();
             break;
             
             default:
