@@ -45,10 +45,10 @@ public class Controller {
                     new esLoading010().figuraRotacion();
                 break;
                 case 11:
-
+                    new esLoading020().escaleraSpinner();
                 break;
                 case 12:
-
+                    new esLoading021().escaleraWaiting();
                 break;
                 case 13:
                      System.out.println("Saliendo al menú principal...");
