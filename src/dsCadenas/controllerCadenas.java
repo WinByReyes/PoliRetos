@@ -8,15 +8,15 @@ public class controllerCadenas {
         String frase =  Lector.leerFrase();
 
         if (!validarIngreso.esFraseValida(frase)) {
-            System.out.println("Frase inválida o excede límite.");
+            System.out.println(colors.ROJO+ "Frase inválida o excede límite."+ colors.RESET);
             return;
         }
 
         while (opcion != 10) {
-            System.out.println("\n--- Menú de Cadenas ---");
-            System.out.println("1. Mostrar vocales \n2.Mostrar letras \n3.Eliminar vocal ");
-            System.out.println("4. Eliminar letra \n5.Invertir la frase \n6.Invertir la frase (Mayusculas) ");
-            System.out.println("7. Mostrar sin la J \n8.Advininar Anagrama \n9.Eliminar vocal ");
+            System.out.println(colors.CYAN+ "\n--- Menú de Cadenas ---" + colors.RESET);
+            System.out.println("1. Contar vocales en frase \n2.Contar letras en frase \n3.Eliminar vocal de frase ");
+            System.out.println("4. Eliminar letra de frase \n5.Frase invertida con vocales mayúsculas \n6.Frase invertida con todas mayúsculas ");
+            System.out.println("7. Frase mayúsculas sin la letra J \n8.Advininar Anagrama \n9.Convertir letra a mayúscula y otra a minúscula ");
             System.out.println("10 Salir");
             System.out.print("Elige una opción: ");
             opcion = validarIngreso.validarIngresoNumero();

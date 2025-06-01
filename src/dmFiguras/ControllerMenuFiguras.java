@@ -5,16 +5,13 @@ import Utility.*;
 public class ControllerMenuFiguras {
     public void showMenu() {
     int figura = 0;
-    System.out.println("Bienvenido a PoliRetos");
-    System.out.println("Este es un programa para imprimir figuras en la consola");
-    
     while (figura != 20) {
-        System.out.println("\nElige una figura para imprimir:");
+        System.out.println(colors.CYAN+ "\nElige una figura para imprimir:" + colors.RESET);
         for (int i = 1; i <= 19; i++) {
             System.out.println(i + ". Figura " + i);
         }
         System.out.println("20. Salir");
-        System.out.print("Ingrese el número de la figura que desea imprimir: ");
+        System.out.print(colors.AMARILLO+ "Ingrese el número de la figura que desea imprimir: "+ colors.RESET);
         
         figura = validarIngreso.validarIngresoNumero();
 

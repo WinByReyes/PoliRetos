@@ -5,21 +5,21 @@ public class emA01 {
 
     public void emMostrarCargaNombre() {
         int n = 0;
-        // Pedir cantidad de nombres con validación simple
+        
         do {
-            System.out.print("¿Cuántos nombres quieres ingresar? ");
+            System.out.print("¿Cuántos nombres quieres ingresar? (MAX 5)");
             try {
                 n = Integer.parseInt(Lector.sc.nextLine());
-                if (n <= 0) System.out.println("Debe ingresar un número positivo.");
+                if (n <= 0 || n > 5) System.out.println("Numeros invalidos");
             } catch (NumberFormatException e) {
                 System.out.println("Entrada inválida, ingrese un número.");
             }
-        } while (n <= 0);
+        } while (n <= 0 || n > 5);
 
         String[] emNombres = new String[n];
         int[] emPorcentajes = new int[n];
 
-        // Pedir nombres usando el método de Lector
+        
         for (int i = 0; i < n; i++) {
             emNombres[i] = Lector.pedirPalabraValida();
         }

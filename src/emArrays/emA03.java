@@ -7,7 +7,7 @@ public class emA03 {
     public void emMostrarNombrePlano(){
         // Solicitar al usuario que ingrese su nombre
         System.out.print("Ingrese su nombre para dibujarlo en un plano cartesiano: ");
-        String nombre = Lector.leer();
+        String nombre = Lector.sc.nextLine();
         int maxY = 2 * (nombre.length() - 1); // Ajustamos el máximo de Y
 
         for (int i = maxY; i >= 0; i--) { // Eje Y desde maxY hasta 0

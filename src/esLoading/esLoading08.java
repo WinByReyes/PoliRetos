@@ -2,17 +2,13 @@ package esLoading;
 import Utility.*;
 
 public class esLoading08 {
-    public String nombreApellido() {
-            
+    
+        public void nombreCarga(){
             System.out.print("Ingrese su nombre: ");
             String nombre = Lector.sc.nextLine();
             System.out.print("Ingrese su apellido: ");
             String apellido = Lector.sc.nextLine();
-            return nombre + " " + apellido; // Devuelve el nombre completo
-        }
-        public void nombreCarga(){
-            //Crea una funcion el nombre y apellidos y realizar la carga mostrando letra a letra hasta el 100% 
-            String nombreCompleto = nombreApellido();
+            String nombreCompleto = nombre + " " + apellido;
             int totalSteps = 20; // Longitud de la barra de carga
             for (int i = 0; i <= totalSteps; i++) {
                 StringBuilder barraCarga = new StringBuilder();

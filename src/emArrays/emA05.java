@@ -3,7 +3,6 @@ import Utility.*;
 
 public class emA05 {
     
-    @SuppressWarnings("resource")
 
     public void emMatrizNomCuadrada() {
         

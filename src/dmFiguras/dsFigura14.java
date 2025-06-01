@@ -1,10 +1,11 @@
 package dmFiguras;
-
+import Utility.colors;
 public class dsFigura14 {
     private int[][] piramide;
 
     public void generarFiguraF14(int nivel)
     {
+        System.out.println(colors.AZUL);
         piramide = new int[nivel][nivel];
 
         for(int i =0; i< nivel; i++)
@@ -29,5 +30,6 @@ public class dsFigura14 {
             System.out.println();
         }
         System.out.println();
+        System.out.println(colors.RESET);
     }
 }

@@ -8,10 +8,6 @@ public class Lector {
         System.out.print("Ingrese una frase (MAX 150): ");
         return sc.nextLine();
     }
-    //Leer tu nombre
-    public static String leer() {
-        return sc.nextLine();
-    }
     //Leer vocales para cadena
     public static String leerPalabra(){
          System.out.print("Ingrese la vocal a eliminar: ");

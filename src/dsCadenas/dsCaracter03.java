@@ -4,7 +4,7 @@ import Utility.*;
 public class dsCaracter03 {
     public void eliminarCadena(String frase)
     {
-       
+       System.out.println(colors.AZUL);
         char vocal = Lector.pedirVocal();
 
         StringBuilder resultado = new StringBuilder();
@@ -16,6 +16,7 @@ public class dsCaracter03 {
             }
         }
 
-        System.out.println("Frase sin la vocal '" + vocal + "': " + resultado.toString());
+        System.out.println(colors.ROJO+ "Frase sin la vocal '" + vocal + "': "+ colors.RESET 
+         + colors.AZUL+ resultado.toString() + colors.RESET);
       }
 }

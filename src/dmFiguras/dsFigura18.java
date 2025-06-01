@@ -1,9 +1,10 @@
 package dmFiguras;
-
+import Utility.colors;
 public class dsFigura18 {
     
     public void mostrarFigura18(int nivel)
     {
+        System.out.println(colors.AZUL);
         int[][] triangulo = new int[nivel][nivel];
         for (int i = 0; i < nivel; i++) {
             triangulo[i][0] = 1;
@@ -18,5 +19,6 @@ public class dsFigura18 {
             System.out.println();
         }    
         System.out.println();
+        System.out.println(colors.RESET);
     }
 }

@@ -8,8 +8,8 @@ public class emA02 {
      */
     public void emMostrarInicialMatriz() {
 
-        System.out.print("Introduce tu nombre y apellido: ");
-        String nombreCompleto = Lector.leerNombre();
+        System.out.println("Inngresar tu nombre y apellido.");
+        String nombreCompleto = Lector.sc.nextLine();
         
         //Separar nombre y apellido y obtener iniciales
         String[] partes = nombreCompleto.trim().split("\\s+");

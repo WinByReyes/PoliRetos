@@ -6,6 +6,7 @@ public class emC08 {
 
 
     public void emAnagrama() {
+        
         String[][] anagramas = {
             {"delira", "lidera"},
             {"Ballena", "llenaba"},
@@ -17,22 +18,22 @@ public class emC08 {
             String palabra = pair[0];
             String anagramaCorrecto = pair[1];
             boolean acierto = false;
-            System.out.println("Ingrese el anagrama de la palabra: " + palabra);
+            System.out.println(colors.MORADO+ "Ingrese el anagrama de la palabra: " + palabra + colors.RESET);
 
             for (int intento = 0; intento < 3; intento++) {
                 String respuesta = Lector.pedirPalabraValida();
 
                 if (respuesta.equalsIgnoreCase(anagramaCorrecto)) {
-                    System.out.println("¡Correcto! ");
+                    System.out.println(colors.VERDE+ "¡Correcto! "+ colors.RESET);
                     acierto = true;
                     break;
                 } else if (intento < 2) {
-                    System.out.println("Incorrecto. Te quedan " + (2 - intento) + " intentos.");
+                    System.out.println(colors.ROJO+ "Incorrecto. Te quedan " + (2 - intento) + " intentos." + colors.RESET);
                 }
         }
 
         if(!acierto) {
-            System.out.println("Lo siento, la respuesta correcta era: " + anagramaCorrecto);
+            System.out.println(colors.AMARILLO+ "Lo siento, la respuesta correcta era: " + anagramaCorrecto + colors.RESET);
         }
         System.out.println(); 
     }

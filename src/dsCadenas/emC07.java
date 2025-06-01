@@ -1,5 +1,6 @@
 package dsCadenas;
 
+import Utility.colors;
 
 public class emC07 {
 
@@ -12,7 +13,7 @@ public class emC07 {
                 resultado.append(letra);
             }
         }
-        System.out.println("La frase convertida sin J es: " + resultado);
+        System.out.println(colors.AZUL + "La frase convertida sin J es: " +colors.RESET + colors.AMARILLO+ resultado + colors.RESET);
     }
 
 }

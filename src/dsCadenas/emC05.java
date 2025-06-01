@@ -1,5 +1,7 @@
 package dsCadenas;
 
+import Utility.colors;
+
 public class emC05 {
 
     public void emFrase05(String frase) {
@@ -13,7 +15,7 @@ public class emC05 {
                 fraseInvertida.append(letra);
             }
         }
-        System.out.println("La frase invertida es: " + fraseInvertida);
+        System.out.println(colors.AZUL+ "La frase invertida es: " +colors.RESET + colors.AMARILLO+ fraseInvertida + colors.RESET);
     }
     
 }

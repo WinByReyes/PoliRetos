@@ -1,10 +1,12 @@
 package dsCadenas;
 
+import Utility.colors;
 
 public class dsCaracter01 {
 
     public void mostrarCantidadVocales(String frase) {
         int contador = 0;
+        
         String vocales = "aeiouáéíóúAEIOUÁÉÍÓÚ";
 
         for (char c : frase.toCharArray()) {
@@ -13,6 +15,7 @@ public class dsCaracter01 {
             }
         }
 
-        System.out.println("Número de vocales: " + contador);
+        System.out.println(colors.AZUL+ "Número de vocales: " + contador+ colors.RESET);
+        
     }
 }

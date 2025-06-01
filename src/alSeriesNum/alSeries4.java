@@ -1,10 +1,10 @@
 package alSeriesNum;
 
 public class alSeries4 {
-    public void imprimir(int n) {
+    public void imprimir(String color, int n, String reset) {
         int numNumUno = 0, numNumDos = 1, denominador = 2;
         for (int i = 0; i < n; i++) {
-            System.out.print(numNumUno + "/" + denominador + " ");
+            System.out.print(color +numNumUno + "/" + denominador + reset);
             int temp = numNumUno + numNumDos ;
             numNumUno = numNumDos;
             numNumDos = temp; 

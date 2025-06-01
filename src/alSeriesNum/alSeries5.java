@@ -1,11 +1,11 @@
 package alSeriesNum;
 
 public class alSeries5 {
-    public void imprimir(int n) {
+    public void imprimir(String color, int n,String reset) {
         int cont = 0, num = 2;
          while (cont < n) {
             if (numeroPrimo(num)) {
-                System.out.print(num + " ");
+                System.out.print(color+ num + reset);
                 cont++;
             }
             num++;

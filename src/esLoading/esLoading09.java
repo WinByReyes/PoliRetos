@@ -2,17 +2,12 @@ package esLoading;
 import Utility.*;
 
 public class esLoading09 {
-    public String nombreApellido() {
-
-                System.out.print("Ingrese su nombre: ");
+    public void nombreCompleto() {
+         System.out.print("Ingrese su nombre: ");
                 String nombre = Lector.sc.nextLine();
                 System.out.print("Ingrese su apellido: ");
                 String apellido = Lector.sc.nextLine();
-                return nombre + " " + apellido; // Devuelve el nombre completo
-            }
-    public void nombreCompleto() {
-         //llama a la funcion nombre y apellido
-            String nombreCompleto = nombreApellido();
+            String nombreCompleto = nombre + " " + apellido;
             System.out.println("Nombre completo: " + nombreCompleto);
          
             //Pedir y mostrar el nombre completo, mostrando solo una letra en la misma linea 0% hasta 100% 

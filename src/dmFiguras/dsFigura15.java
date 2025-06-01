@@ -1,8 +1,9 @@
 package dmFiguras;
-
+import Utility.colors;
 public class dsFigura15 {
     public void mostrarFigura15(int nivel)
     {
+        System.out.println(colors.AZUL);
         int [][] piramide = new int[nivel][nivel];
 
         for(int i = 0; i < nivel; i++)
@@ -26,5 +27,6 @@ public class dsFigura15 {
             System.out.println();
         }
         System.out.println();
+        System.out.println(colors.RESET);
     }
 }

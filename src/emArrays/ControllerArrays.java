@@ -8,9 +8,9 @@ public class ControllerArrays {
 
         while(opcion != 6)
         {
-            System.out.println("\n--- Menú de Arrays ---");
-            System.out.println("1. Mostrar barrra de carga por nombres \n2.Presentar letras por matriz \n3.Mostrar matriz del nombre ");
-            System.out.println("4. Mostrar nombre y apellido en matriz\n5.Mostrar nombre ramdon \n6.Salir ");
+            System.out.println(colors.CYAN+ "\n--- Menú de Arrays ---"+ colors.RESET);
+            System.out.println("1.Barras de carga por palabra \n2.Matriz iniciales con carácter \n3.Plano coordenadas con nombre ");
+            System.out.println("4. Matriz en X con nombre y apellido\n5.Matriz aleatoria con letras y asteriscos \n6.Salir ");
             System.out.print("Elige una opción: ");
             opcion = validarIngreso.validarIngresoNumero();
 

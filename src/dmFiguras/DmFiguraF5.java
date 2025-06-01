@@ -1,7 +1,8 @@
 package dmFiguras;
-
+import Utility.colors;
 public class DmFiguraF5 {
     public void imprimir(int n) {
+        System.out.println(colors.AZUL);
         for (int i = n; i >= 1; i--) {
             for (int j = 0; j < n - i; j++) {
                 System.out.print(" ");
@@ -11,5 +12,6 @@ public class DmFiguraF5 {
             }
             System.out.println();
         }
+        System.out.println(colors.RESET);
     }
 }
