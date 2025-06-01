@@ -1,13 +1,17 @@
 package Utility;
+import alSeriesNum.ControllerMenuSeries;
 import dmFiguras.ControllerMenuFiguras;
 import dsCadenas.controllerCadenas;
+import emArrays.ControllerArrays;
+import esLoading.Controller;
+
 
 public class seccionMenu {
     public static void mostrarSeccionMenu(int seccion) throws InterruptedException
 {
     switch (seccion) {
             case 1:
-            //Serienumerica
+            new ControllerMenuSeries().showMenu();
             break;
             case 2:
             //Caracteres
@@ -19,10 +23,10 @@ public class seccionMenu {
             new controllerCadenas().showMenuCadenas();
             break;
             case 5:
-            //Arrays
+            new ControllerArrays().showMenuArrays();
             break;
             case 6:
-            //Loading
+            new Controller().showMenuLoading();
             break;
             case 7:
             //Loading

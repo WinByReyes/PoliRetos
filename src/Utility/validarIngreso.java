@@ -2,6 +2,7 @@ package Utility;
 
 public class validarIngreso {
     
+  //Validar numeros
     public static int validarIngresoNumero() {
     int num=-1;
     boolean aceptacion=false;
@@ -33,4 +34,18 @@ public class validarIngreso {
     }
     return num;
   }
+//Validar texto
+  private static final int LIMITE_MAXIMO = 150;
+
+    public static boolean esFraseValida(String frase) {
+        if (frase == null || frase.isEmpty()) {
+            return false;
+        }
+        if (frase.length() > LIMITE_MAXIMO) {
+            return false;
+        }
+        String regex = "^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ ,\\.\\?\\!\\-]*$";
+        return frase.matches(regex);
+    }
+
 }

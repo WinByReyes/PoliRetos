@@ -1,4 +1,4 @@
-package emCadena;
+package dsCadenas;
 import java.util.Scanner;
 
 public class emC09 {

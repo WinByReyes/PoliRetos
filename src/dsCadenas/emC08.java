@@ -1,12 +1,10 @@
-package emCadena;
-import java.util.Scanner;
+package dsCadenas;
+
+import Utility.*;
 
 public class emC08 {
 
-    /**
-     * Permite al usuario adivinar anagramas de palabras dadas.
-     * El usuario tiene 3 intentos para cada anagrama.
-     */
+
     public void emAnagrama() {
         String[][] anagramas = {
             {"delira", "lidera"},
@@ -15,9 +13,6 @@ public class emC08 {
             {"España", "apañes"},
             {"Enrique", "quieren"},
         };
-
-        @SuppressWarnings("resource")
-        Scanner sc = new Scanner(System.in);
         for (String[] pair : anagramas){
             String palabra = pair[0];
             String anagramaCorrecto = pair[1];
@@ -25,7 +20,8 @@ public class emC08 {
             System.out.println("Ingrese el anagrama de la palabra: " + palabra);
 
             for (int intento = 0; intento < 3; intento++) {
-                String respuesta = sc.nextLine();
+                String respuesta = Lector.pedirPalabraValida();
+
                 if (respuesta.equalsIgnoreCase(anagramaCorrecto)) {
                     System.out.println("¡Correcto! ");
                     acierto = true;

@@ -1,5 +1,5 @@
 package emArrays;
-import java.util.Scanner;
+import Utility.*;
 
 public class emA02 {
 
@@ -8,10 +8,8 @@ public class emA02 {
      */
     public void emMostrarInicialMatriz() {
 
-        @SuppressWarnings("resource")
-        Scanner sc = new Scanner(System.in);
         System.out.print("Introduce tu nombre y apellido: ");
-        String nombreCompleto = sc.nextLine();
+        String nombreCompleto = Lector.leerNombre();
         
         //Separar nombre y apellido y obtener iniciales
         String[] partes = nombreCompleto.trim().split("\\s+");
@@ -24,9 +22,9 @@ public class emA02 {
 
         //Pedir tamano y caracter
         System.out.print("Ingrese el tamano de la matriz: ");
-        int tamano = sc.nextInt();
+        int tamano = validarIngreso.validarIngresoNumero();
         System.out.print("Ingrese el caracter para dibujar: ");
-        char caracter = sc.next().charAt(0);
+        char caracter = Lector.pedirLetra();
 
         char[][] matriz = new char[tamano][tamano * 2 + 1];
 

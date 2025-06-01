@@ -7,7 +7,7 @@ public class controllerCadenas {
         int opcion = 0;
         String frase =  Lector.leerFrase();
 
-        if (!validarCadena.esFraseValida(frase)) {
+        if (!validarIngreso.esFraseValida(frase)) {
             System.out.println("Frase inválida o excede límite.");
             return;
         }
@@ -15,6 +15,8 @@ public class controllerCadenas {
         while (opcion != 10) {
             System.out.println("\n--- Menú de Cadenas ---");
             System.out.println("1. Mostrar vocales \n2.Mostrar letras \n3.Eliminar vocal ");
+            System.out.println("4. Eliminar letra \n5.Invertir la frase \n6.Invertir la frase (Mayusculas) ");
+            System.out.println("7. Mostrar sin la J \n8.Advininar Anagrama \n9.Eliminar vocal ");
             System.out.println("10 Salir");
             System.out.print("Elige una opción: ");
             opcion = validarIngreso.validarIngresoNumero();
@@ -29,28 +31,28 @@ public class controllerCadenas {
                     new dsCaracter03().eliminarCadena(frase);;
                     break;
                 case 4:
-                    
+                    new emC04().emFrase04(frase);
                     break;
                 case 5:
-                    
+                    new emC05().emFrase05(frase);
                     break;
                 case 6:
-                    
+                    new emC06().emFrase06(frase);
                     break;
                 case 7:
-                    
+                    new emC07().emConvertirSinJ(frase);
                     break;
                 case 8:
-                    
+                    new emC08().emAnagrama();
                     break;
                 
                 case 9:
-                    
+                    new emC09().emFrase09(frase);
                     break;
                 case 10:
-                    
+                    System.out.println("Saliendo al menú principal...");
                     break;
-                default:
+                default: System.out.println("Opción no válida");
                     break;
             }
 

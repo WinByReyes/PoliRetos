@@ -1,15 +1,13 @@
 package emArrays;
-import java.util.Scanner;
+import Utility.*;;
 
 public class emA04 {
 
     public void emMostrarNombreCruz() {
-    @SuppressWarnings("resource")
-    Scanner sc = new Scanner(System.in);
     System.out.print("Introduce tu nombre: ");
-    String emNombre = sc.nextLine().trim();
+    String emNombre = Lector.sc.nextLine().trim();
     System.out.print("Introduce tu apellido: ");
-    String emApellido = sc.nextLine().trim();
+    String emApellido = Lector.sc.nextLine().trim();
 
     int emTam = Math.max(emNombre.length(), emApellido.length());
     String[][] emMatriz = new String[emTam][emTam];

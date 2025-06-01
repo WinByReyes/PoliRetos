@@ -1,40 +1,65 @@
 package emArrays;
-import java.util.Scanner;
+import Utility.*;
 
 public class emA01 {
 
-    /**
-     * Pide el porcentaje y presenta los nombres con el porcentaje de carga asignado.
-     * @param nombres Array de nombres de personas.
-     */
-    public void emMostrarCargaNombre(){
-        String[] emNombres = {"Manuel", "Eduardo", "Sares", "Herrera"};
-        int[] emPorcentajes = new int[emNombres.length];
+    public void emMostrarCargaNombre() {
+        int n = 0;
+        // Pedir cantidad de nombres con validación simple
+        do {
+            System.out.print("¿Cuántos nombres quieres ingresar? ");
+            try {
+                n = Integer.parseInt(Lector.sc.nextLine());
+                if (n <= 0) System.out.println("Debe ingresar un número positivo.");
+            } catch (NumberFormatException e) {
+                System.out.println("Entrada inválida, ingrese un número.");
+            }
+        } while (n <= 0);
 
-        @SuppressWarnings("resource")
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Ingrese el porcentaje de carga para cada palabra (separado por espacios): ");
-        for(int emI = 0; emI < emNombres.length; emI++) {
-            emPorcentajes[emI] = sc.nextInt();
+        String[] emNombres = new String[n];
+        int[] emPorcentajes = new int[n];
+
+        // Pedir nombres usando el método de Lector
+        for (int i = 0; i < n; i++) {
+            emNombres[i] = Lector.pedirPalabraValida();
         }
 
-        for (int emI = 0; emI < emNombres.length; emI++) {
-            String emBarra = emGenerarBarraCarga(emPorcentajes[emI]);
-            int emLetras = (int) Math.round((emNombres[emI].length() * emPorcentajes[emI]) / 100.0);
-            String emRecorte = emNombres[emI].substring(0, Math.max(1, emLetras));
-            System.out.printf("%s: %3d%% %s\n", emBarra, emPorcentajes[emI], emRecorte);
+        // Pedir porcentajes con validación simple
+        System.out.println("Ingrese el porcentaje de carga para cada nombre (separado por espacios):");
+        for (int i = 0; i < n; i++) {
+            int porcentaje = -1;
+            do {
+                System.out.printf("Porcentaje para %s: ", emNombres[i]);
+                try {
+                    porcentaje = Integer.parseInt(Lector.sc.nextLine());
+                    if (porcentaje < 0 || porcentaje > 100) {
+                        System.out.println("El porcentaje debe estar entre 0 y 100.");
+                        porcentaje = -1;
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Entrada inválida, ingrese un número.");
+                }
+            } while (porcentaje == -1);
+            emPorcentajes[i] = porcentaje;
         }
-        
+
+        // Mostrar resultados
+        for (int i = 0; i < n; i++) {
+            String emBarra = emGenerarBarraCarga(emPorcentajes[i]);
+            int emLetras = (int) Math.round((emNombres[i].length() * emPorcentajes[i]) / 100.0);
+            String emRecorte = emNombres[i].substring(0, Math.max(1, emLetras));
+            System.out.printf("%s: %3d%% %s\n", emBarra, emPorcentajes[i], emRecorte);
+        }
     }
 
     private String emGenerarBarraCarga(int porcentaje) {
         int emTotal = 15;
         int emLlenos = (int) Math.round((porcentaje / 100.0) * emTotal);
         StringBuilder emBarra = new StringBuilder("[");
-        for (int emI = 0; emI < emLlenos; emI++) emBarra.append("=");
-            emBarra.append(">");
-        for (int emI = emLlenos + 1; emI < emTotal; emI++) emBarra.append(" ");
-            emBarra.append("]");
+        for (int i = 0; i < emLlenos; i++) emBarra.append("=");
+        emBarra.append(">");
+        for (int i = emLlenos + 1; i < emTotal; i++) emBarra.append(" ");
+        emBarra.append("]");
         return emBarra.toString();
     }
 }

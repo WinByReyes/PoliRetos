@@ -1,19 +1,19 @@
 package emArrays;
-import java.util.Scanner;
+import Utility.*;
 
 public class emA05 {
     
     @SuppressWarnings("resource")
 
     public void emMatrizNomCuadrada() {
-        Scanner sc = new Scanner(System.in);
+        
         String nombreCompleto;
         boolean inputValido = false;
 
         // Validar entrada: no espacios al inicio y al menos dos palabras
         do {
             System.out.println("Ingrese su nombre completo (nombres y apellidos):");
-            nombreCompleto = sc.nextLine().trim();
+            nombreCompleto = Lector.sc.nextLine().trim();
 
             if (nombreCompleto.isEmpty() || nombreCompleto.startsWith(" ")) {
                 System.out.println("Por favor, no ingrese espacios antes del nombre.");

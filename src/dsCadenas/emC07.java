@@ -1,16 +1,9 @@
-package emCadena;
-import java.util.Scanner;
+package dsCadenas;
+
 
 public class emC07 {
 
-    /**
-     * Pide una frase y la presenta convertida sin la letra 'j'.
-     */
-    public void emConvertirSinJ(){
-        @SuppressWarnings("resource")
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Ingrese una frase: ");
-        String frase = sc.nextLine();
+    public void emConvertirSinJ(String frase){
         
         StringBuilder resultado = new StringBuilder();
         for (int i = 0; i < frase.length(); i++) {
