@@ -32,8 +32,7 @@ public class seccionMenu {
             //Loading
             break;
             case 8:
-            //Todo
-            new ControllerMenuFiguras().showMenu();
+            System.out.println("Gracias por usar la aplicacion");
             break;
             
             default:

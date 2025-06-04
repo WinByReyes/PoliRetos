@@ -11,7 +11,7 @@ public class App {
            do {
                System.out.println(colors.AZUL+ "\nIngrese que sección de los PoliRetos desea probar"+ colors.RESET);
                System.out.println("1. Series Numéricas\n2. Series de Caracteres\n3. Figuras\n4. Cadena de Caracteres");
-               System.out.println("5. Arrays\n6. Loading\n7. Recursion\n8. Todo\n9. Salir");
+               System.out.println("5. Arrays\n6. Loading\n7. Recursion\n8. Salir");
                System.out.print("\nNumero de sección a visitar: ");
                funcion= validarIngreso.validarIngresoNumero();
                if (funcion == 9) break;
