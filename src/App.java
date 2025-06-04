@@ -18,7 +18,7 @@ public class App {
                seccionMenu.mostrarSeccionMenu(funcion);
            } while(seccionMenu.seguirNavegando());
    
-           System.out.println("\n---------------Gracias por visitar nuestro trabajo---------------");
+           System.out.println(colors.VERDE + "\n---------------Gracias por visitar nuestro trabajo---------------" + colors.RESET);
        }
        
     }

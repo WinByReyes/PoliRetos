@@ -4,6 +4,8 @@ import dmFiguras.ControllerMenuFiguras;
 import dsCadenas.controllerCadenas;
 import emArrays.ControllerArrays;
 import esLoading.Controller;
+import ksRecursividad.controllerRecurs;
+import ksSeriesChar.ksControllerChar;
 
 
 public class seccionMenu {
@@ -14,7 +16,7 @@ public class seccionMenu {
             new ControllerMenuSeries().showMenu();
             break;
             case 2:
-            //Caracteres
+            new ksControllerChar().showMenuChar();
             break;
             case 3:
             new ControllerMenuFiguras().showMenu();
@@ -29,7 +31,7 @@ public class seccionMenu {
             new Controller().showMenuLoading();
             break;
             case 7:
-            //Loading
+            new controllerRecurs().showMenuRecurs();
             break;
             case 8:
             System.out.println("Gracias por usar la aplicacion");
@@ -42,12 +44,12 @@ public class seccionMenu {
 }
 
 public static boolean seguirNavegando (){
-        System.out.println("Desea visitar otra seccion? Ingrese Si para continuar y No para cerrar");
+        System.out.println(colors.AMARILLO+ "Desea visitar otra seccion? Ingrese Si para continuar y No para cerrar"+ colors.RESET);
         do {
             String continuar=Lector.sc.nextLine().toLowerCase().trim();
             if ("si".equals(continuar)) return true;
             else if ("no".equals(continuar)) return false; 
-            else System.out.println("\u001B[31mSolo debe ingresar Si o No \u001B[0m");
+            else System.out.println(colors.ROJO + "Solo debe ingresar Si o No" + colors.RESET);
         } while (true);
     }
 }
